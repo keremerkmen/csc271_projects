@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit a New Recipe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        .link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Submit a New Recipe</h1>
+    <form action="index.html" method="get">
+        <label for="recipe-name">Recipe Name:</label>
+        <input type="text" id="recipe-name" name="recipe-name" required>
+
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+
+        <label for="instructions">Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="4" required></textarea>
+
+        <label>Difficulty Level:</label>
+        <input type="radio" id="easy" name="difficulty" value="Easy" required>
+        <label for="easy">Easy</label>
+        <input type="radio" id="medium" name="difficulty" value="Medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="hard" name="difficulty" value="Hard">
+        <label for="hard">Hard</label>
+
+        <label>Dietary Preferences:</label>
+        <input type="checkbox" id="vegetarian" name="dietary" value="Vegetarian">
+        <label for="vegetarian">Vegetarian</label>
+        <input type="checkbox" id="vegan" name="dietary" value="Vegan">
+        <label for="vegan">Vegan</label>
+        <input type="checkbox" id="gluten-free" name="dietary" value="Gluten-Free">
+        <label for="gluten-free">Gluten-Free</label>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+
+    <div class="link">
+        <a href="index.html">Back to Home Page</a>
+    </div>
+</div>
+
+</body>
+</html>
