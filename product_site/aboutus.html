@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About KSE Gym</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+        }
+        .navbar {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .navbar img {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        .navbar button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        main {
+            max-width: 800px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        form {
+            margin: 20px 0;
+        }
+        form input, form button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="images/logo.png" alt="KSE Gym Logo">
+        <button onclick="location.href='index.html'">Home</button>
+        <button onclick="location.href='products.html'">Products</button>
+        <button onclick="location.href='aboutus.html'">About Us</button>
+        <button onclick="location.href='contact.html'">Contact</button>
+    </div>
+    <main>
+        <h1>About KSE Gym</h1>
+        <h2>Want to know more about us?</h2>
+        <p>
+            KSE Gym is your ultimate fitness destination. In KSE gym we dedicate ourselves to provide the best workout plans for our customers. 
+            I'm Kerem Erkmen the founder of KSE Gym. I'm a fitness enthusiast and I have been working out for 10 years. 
+            I have a degree in exercise science and I'm a certified personal trainer. I have been helping people to reach their fitness goals for 5 years. 
+            I have created KSE Gym to help more people to reach their fitness goals. ME and my team are here to help you to reach your fitness goals. 
+        </p>
+        <img src="images/equipment.jpg" alt="KSE Gym Workout Area" width="600" height="400">
+        
+        <h2>Our Trainers</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Specialty</th>
+                <th>Experience</th>
+            </tr>
+            <tr>
+                <td>Kerem Erkmen</td>
+                <td>Personal Training</td>
+                <td>10 years</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>Yoga</td>
+                <td>5 years</td>
+            </tr>
+            <tr>
+                <td>John Smith</td>
+                <td>Strength Training</td>
+                <td>7 years</td>
+            </tr>
+        </table>
+        
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <h2>Watch Our Introduction Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MPIm7Pg4vds?start=114" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="aboutus.html">About Us</a>
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/erkmenkerem/">LinkedIn</a><br>
+            <a href="mailto:kerem_erkmen@uri.edu">Email Us</a><br>
+            <a href="https://www.instagram.com/kerokero1907/">Instagram</a><br>
+            <a href="https://www.facebook.com/kerem.erkmen/">Facebook</a><br>
+            <a href="https://x.com/KeremErkmen3">Twitter</a><br>
+        </p>
+    </main>
+</body>
+</html>
