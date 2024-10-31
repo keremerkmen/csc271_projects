@@ -9,7 +9,7 @@ let movieURLArray = [
 ];
 
 // Create an array with links to the HTML files for each movie page.
-let movieLinkArray = ["the-dark-knight.html", "home-alone.html", "dune.html"];
+let movieLinkArray = ["the-dark-knight.html", "https://nroy0703.rhody.dev/csc271_projects/labs/lab8_uri_mdb-main/lab8_uri_mdb-main/home-alone.html", "dune.html"];
 
 // Create an array to store each movie's rating (1 to 5). Try a different rating for each movie!
 let movieRatingArray = [5, 4, 3];
