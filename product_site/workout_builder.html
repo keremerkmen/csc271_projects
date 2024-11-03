@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Builder - KSE Gym</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <img src="images/logo.png" alt="KSE Gym Logo">
+        <button aria-label="Home" class="nav-button" data-href="index.html">Home</button>
+        <button aria-label="Workout Builder" class="nav-button" data-href="workout_builder.html">Workout Builder</button>
+        <button aria-label="Calculators" class="nav-button" data-href="calculators.html">Calculators</button>
+        <button aria-label="Products" class="nav-button" data-href="products.html">Products</button>
+        <button aria-label="About Us" class="nav-button" data-href="aboutus.html">About Us</button>
+    </nav>
+    <main>
+        <h1>Build Your Workout Plan</h1>
+        
+        <!-- Form Container to Stack Image and Form Vertically -->
+        <div class="form-container">
+            <img src="images/goals.png" alt="Workout Goals" class="form-image">
+            
+            <!-- Workout Form Section Below the Image -->
+            <div id="workout-form">
+                <label for="goal">Select Your Goal:</label>
+                <select id="goal">
+                    <option value="strength">Strength</option>
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="endurance">Endurance</option>
+                </select>
+    
+                <!-- Additional Form Fields (Equipment, Intensity, Exercise Type) -->
+                <div id="equipment-selection" class="hidden">
+                    <label for="equipment">Available Equipment:</label>
+                    <select id="equipment">
+                        <option value="dumbbells">Dumbbells</option>
+                        <option value="resistance_bands">Resistance Bands</option>
+                        <option value="bodyweight">Bodyweight Only</option>
+                    </select>
+                </div>
+    
+                <div id="intensity-selection" class="hidden">
+                    <label for="intensity">Preferred Intensity:</label>
+                    <select id="intensity">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+    
+                <div id="exercise-type-selection" class="hidden">
+                    <label for="exercise-type">Exercise Type:</label>
+                    <select id="exercise-type">
+                        <option value="running">Running</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="swimming">Swimming</option>
+                    </select>
+                </div>
+    
+                <button type="button" id="generate-workout">Generate Workout Plan</button>
+            </div>
+        </div>
+    
+        <!-- Workout Result Section Below the Form -->
+        <div id="workout-result" class="hidden">
+            <h2>Your Workout Plan</h2>
+            <p id="workout-description"></p>
+            <iframe id="video-frame" width="560" height="315" class="hidden" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </main>    
+
+    <!-- JavaScript File -->
+    <script src="js/workout_builder.js"></script>
+
+    <footer>
+        &copy; 2024 KSE Gym. All rights reserved.
+    </footer>
+</body>
+</html>
