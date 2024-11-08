@@ -82,8 +82,8 @@ footer {
     }
 
     main {
-        padding-top: 20px; /* Adjust padding to ensure content is not hidden */
-        padding-bottom: 60px; /* Adjust padding to ensure content is not hidden */
+        padding-top: 20px; 
+        padding-bottom: 60px; 
         width: 100%;
         font-size: larger;
     }
