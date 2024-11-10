@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Basic function: Display a welcome message
+    showWelcomeMessage();
+
     const goalSelect = document.getElementById('goal');
     const equipmentSelection = document.getElementById('equipment-selection');
     const intensitySelection = document.getElementById('intensity-selection');
@@ -7,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const workoutResult = document.getElementById('workout-result');
     const workoutDescription = document.getElementById('workout-description');
     const videoFrame = document.getElementById('video-frame');
+
+    // Helper functions
+    function showWelcomeMessage() {
+        console.log('Welcome to the Workout Builder App!');
+    }
+
+    function updateTextContent(element, text) {
+        if (element) element.textContent = text;
+    }
+
+    function setElementVisibility(element, isVisible) {
+        if (element) element.style.display = isVisible ? 'block' : 'none';
+    }
 
     // Add event listeners to navigation buttons
     document.querySelectorAll('.nav-button').forEach(button => {
@@ -21,19 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const goal = goalSelect.value;
 
         if (goal === 'strength') {
-            equipmentSelection.style.display = 'block';
+            setElementVisibility(equipmentSelection, true);
         } else if (goal === 'weight_loss') {
-            intensitySelection.style.display = 'block';
+            setElementVisibility(intensitySelection, true);
         } else if (goal === 'endurance') {
-            exerciseTypeSelection.style.display = 'block';
+            setElementVisibility(exerciseTypeSelection, true);
         }
     });
 
     // Reset form selections
     function resetSelections() {
-        equipmentSelection.style.display = 'none';
-        intensitySelection.style.display = 'none';
-        exerciseTypeSelection.style.display = 'none';
+        setElementVisibility(equipmentSelection, false);
+        setElementVisibility(intensitySelection, false);
+        setElementVisibility(exerciseTypeSelection, false);
     }
 
     // Generate workout plan based on user selections
@@ -80,21 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        workoutDescription.innerText = description;
-        workoutResult.style.display = 'block';
+        updateTextContent(workoutDescription, description);
+        setElementVisibility(workoutResult, true);
 
         // Show the embedded video if available
         if (videoUrl) {
             videoFrame.src = videoUrl;
-            videoFrame.style.display = 'block';
+            setElementVisibility(videoFrame, true);
         }
     });
-
-    // Loop to apply the same code to each element in a NodeList
-    const buttons = document.querySelectorAll('.nav-button');
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function() {
-            location.href = this.getAttribute('data-href');
-        });
-    }
 });
