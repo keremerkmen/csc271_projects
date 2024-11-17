@@ -16,85 +16,48 @@
         <button onclick="location.href='products.html'">Products</button>
         <button onclick="location.href='aboutus.html'">About Us</button>
     </div>
+
     <main>
         <h1>About KSE Gym</h1>
         <h2>Want to know more about us?</h2>
         <p>
-            KSE Gym is your ultimate fitness destination. In KSE gym we dedicate ourselves to provide the best workout plans for our customers. 
-            I'm Kerem Erkmen, the founder of KSE Gym. I'm a fitness enthusiast and I have been working out for 10 years. 
-            I have a degree in exercise science and I'm a certified personal trainer. I have been helping people to reach their fitness goals for 5 years. 
-            I have created KSE Gym to help more people to reach their fitness goals. My team and I are here to help you reach your fitness goals. 
+            KSE Gym is your ultimate fitness destination. We provide the best workout plans for our customers.
+            I'm Kerem Erkmen, the founder of KSE Gym. I have a degree in exercise science and I'm a certified personal trainer.
+            My team and I are here to help you reach your fitness goals.
         </p>
-        <img src="images/equipment.jpg" alt="KSE Gym Workout Area" class="product-image">
-        
-        <h2>Our Trainers</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Specialty</th>
-                    <th>Experience</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kerem Erkmen</td>
-                    <td>Personal Training</td>
-                    <td>10 years</td>
-                </tr>
-                <tr>
-                    <td>Jane Doe</td>
-                    <td>Yoga</td>
-                    <td>5 years</td>
-                </tr>
-                <tr>
-                    <td>John Smith</td>
-                    <td>Strength Training</td>
-                    <td>7 years</td>
-                </tr>
-            </tbody>
-        </table>
 
-        <h2>Kerem's Horoscope</h2>
-        <p id="sign">Zodiac Sign: </p>
-        <p class="birthday">Birthday: </p>
-        <p class="luckyNum">Lucky Number: </p>
-        <p id="horoscope-description">Horoscope Description: </p>
-        <p id="believe-astrology">Do I believe in astrology? </p>
-        <p id="kerem-zodiac">Kerem's Zodiac Sign: </p>
-        <p id="kerem-horoscope">Kerem's Horoscope: </p>
-        
         <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
+        <form id="contactForm" action="submit_form.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
+            <div id="nameFeedback"></div>
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+            <div id="emailFeedback"></div>
             
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>
+            <div id="messageFeedback"></div>
             
             <button type="submit">Submit</button>
+            <div id="formFeedback"></div>
         </form>
-        
+
         <h2>Watch Our Introduction Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MPIm7Pg4vds?start=114" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MPIm7Pg4vds?start=114" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
         <p>
             <a href="index.html">Home</a> | 
             <a href="aboutus.html">About Us</a>
         </p>
-        <p>
-            <a href="https://www.linkedin.com/in/erkmenkerem/">LinkedIn</a><br>
-            <a href="mailto:kerem_erkmen@uri.edu">Email Us</a><br>
-            <a href="https://www.instagram.com/kerokero1907/">Instagram</a><br>
-            <a href="https://www.facebook.com/kerem.erkmen/">Facebook</a><br>
-            <a href="https://x.com/KeremErkmen3">Twitter</a><br>
-        </p>
+        
     </main>
+
     <footer>
-        &copy; 2024 KSE Gym. All rights reserved.
+        <p>&copy; 2024 KSE Gym. All rights reserved.</p>
     </footer>
-    <script src="js/simple_script.js"></script>
+
+    <script src="js/form.js"></script>
 </body>
 </html>
