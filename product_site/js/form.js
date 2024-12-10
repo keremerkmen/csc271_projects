@@ -131,9 +131,11 @@ function handleFormSubmit(event) {
         formFeedback.textContent = 'Please correct the highlighted fields and try again.';
         formFeedback.style.color = 'red';
     } else {
+        event.preventDefault(); // Prevent the default form submission
         formFeedback.textContent = 'Your responses were successfully recorded!';
         formFeedback.style.color = 'green';
         alert(`Thank you for reaching out, ${nameInput.value}! We will get back to you soon.`);
+        window.location.href = 'index.html'; // Redirect to the homepage
     }
 }
 
