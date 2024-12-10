@@ -62,37 +62,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const equipment = document.getElementById('equipment').value;
             if (equipment === 'dumbbells') {
                 description = 'Strength workout using dumbbells.';
-                videoUrl = 'https://www.youtube.com/watch?v=sinkIlViPG8';
+                videoUrl = 'https://www.youtube.com/embed/sinkIlViPG8';
             } else if (equipment === 'resistance_bands') {
                 description = 'Strength workout with resistance bands.';
-                videoUrl = 'https://www.youtube.com/watch?v=M0nREQKiAdo';
+                videoUrl = 'https://www.youtube.com/embed/M0nREQKiAdo';
             } else {
                 description = 'Bodyweight strength exercises.';
-                videoUrl = 'https://www.youtube.com/watch?v=9FBIaqr7TjQ';
+                videoUrl = 'https://www.youtube.com/embed/9FBIaqr7TjQ';
             }
         } else if (goal === 'weight_loss') {
             const intensity = document.getElementById('intensity').value;
             if (intensity === 'low') {
                 description = 'Moderate cardio workout for gradual weight loss.';
-                videoUrl = 'https://www.youtube.com/watch?v=1Et8a3-Rs6E';
+                videoUrl = 'https://www.youtube.com/embed/1Et8a3-Rs6E';
             } else if (intensity === 'medium') {
                 description = 'Medium intensity cardio and strength mix.';
-                videoUrl = 'https://www.youtube.com/watch?v=8qQ6i58J3Kk';
+                videoUrl = 'https://www.youtube.com/embed/8qQ6i58J3Kk';
             } else {
                 description = 'High-intensity interval training (HIIT) for rapid calorie burn.';
-                videoUrl = 'https://www.youtube.com/watch?v=dLjRRBlMNgc';
+                videoUrl = 'https://www.youtube.com/embed/dLjRRBlMNgc';
             }
         } else if (goal === 'endurance') {
             const exerciseType = document.getElementById('exercise-type').value;
             if (exerciseType === 'running') {
                 description = 'Running-based endurance program.';
-                videoUrl = 'https://www.youtube.com/watch?v=QwmLznSm_dc';
+                videoUrl = 'https://www.youtube.com/embed/QwmLznSm_dc';
             } else if (exerciseType === 'cycling') {
                 description = 'Cycling-based endurance program.';
-                videoUrl = 'https://www.youtube.com/watch?v=ZiGE3-L4vyg';
+                videoUrl = 'https://www.youtube.com/embed/ZiGE3-L4vyg';
             } else {
                 description = 'Swimming endurance program.';
-                videoUrl = 'https://www.youtube.com/watch?v=oM4sHl1hTEE';
+                videoUrl = 'https://www.youtube.com/embed/oM4sHl1hTEE';
             }
         }
 
